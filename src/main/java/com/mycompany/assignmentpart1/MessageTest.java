@@ -16,14 +16,14 @@ public class MessageTest {
     @Test
     public void testCheckRecipientCellValid() {
         Message msg = new Message(0, "+27718693002", "Hi there");
-        String result = msg.checkRecipientCell();
+        int result = msg.checkRecipientCell();
         assertEquals("Cell phone number successfully captured.", result);
     }
 
     @Test
     public void testCheckRecipientCellInvalid() {
         Message msg = new Message(0, "08575975889", "Hi there");
-        String result = msg.checkRecipientCell();
+        int result = msg.checkRecipientCell();
         assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.", result);
     }
 
